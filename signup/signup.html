@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Balsamiq+Sans:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <title>Авторизация</title>
+</head>
+<body>
+	<header class="header">
+        <div class="container">
+            <div class="header_box" style="display: flex; justify-content: space-between">
+                <div class="header__inner">
+                    <a href="../index.html" class="headerlogo">ВераВнутри</a>
+                    <div>
+                        <p class="downlogo">
+                            <b>Сайт для тех, кто хочет стать лучше.<b>
+                        </p>
+                    </div>
+                </div>
+                <div class="navBox">
+                    <nav class="nav">
+                        <a class="nav_link" href="../index.html">Главная</a>
+                        <a class="nav_link" href="../films/films1.html">Фильмы</a>
+                        <a class="nav_link" href="../books/books1.html">Книги</a>	
+                    </nav>
+                </div>
+            </div>	
+        </div>
+	</header>
+	<div class="container" style="display: flex; flex-direction: column; justify-content: flex-end;">
+		<form action="check.php" method="post">
+			<fieldset>
+				<div class="form_content">
+					<h2>Уже есть аккаунт? Введите данные:</h2>
+					<div class="form_block">
+						<div class="group">
+							<label class="label">Логин</label>
+							<input type="text" name="login" required="required" pattern="[^А-Яа-яЁё]{5,}">
+						</div>
+						<div class="group">
+							<label class="label">Пароль</label>
+							<input type="password" maxlength="25" name="password" required="required" pattern="[^А-Яа-яЁё]{5,}">
+						</div>
+					</div>
+					<div class="button">
+							<button type="submit">
+								Войти
+							</button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+		<form action="check.php" method="post">
+			<fieldset>
+				<div class="form_content">
+					<h1>Регистрация</h1>
+					<h2 class="i"> Личная информация </h2>
+					<div class="form_block"> 
+						<div class="group">
+							<label class="control-label required">Фамилия</label>
+							<input type="text" name="surname" required="required" pattern="[А-Яа-яЁё]">
+						</div>
+						<div class="group">
+							<label class="control-label required" >Имя</label>
+							<input type="text" name="NamePerson" required="required" pattern="[А-Яа-яЁё]">
+						</div>
+							<div class="group">
+								<label>Пол</label>
+									<input type="radio" name="gender" value="male" checked> Мужской
+									<input type="radio" name="gender" value="female" > Женский
+							</div>
+							<div class="group">
+								<label class="control-label required">Дата рождения</label>
+								<input required="required" type="date" name="dob" required="required" >
+							</div>
+							<div class="group">
+								<label class="control-label required">Возраст</label>
+								<input type="number" name="age" min="18" max="100" value="18" size="2">
+							</div>
+						</div>
+						<h2 class="i"> Контактная информация</h2>
+						<div class="form_block">
+							<div class="group">
+								<label class="control-label required">E-mail</label>
+								<input required="required" type="email" name="E-mail">
+							</div>
+							<div class="group">
+								<label class="control-label required">Номер телефона</label>
+								<input required="required" type="tel" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+							</div>
+						</div>
+						<h2 class="i"> Общая информация</h2>
+						<div class="form_block">
+							<div class="group">
+								<label>Откуда вы узнали о нашем сайте?</label>
+								<select type="text" name="NamePerson">
+									<option>Рассказали друзья</option>
+									<option>Увидел рекламу</option>
+									<option>Сама судьба привела меня сюда</option>
+									<option>Где я?!</option>
+								</select>
+							</div>
+						</div>
+						<div class="button">
+							<div class="button">
+								<button type="submit">Зарегистрироваться</button>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<footer>
+        <div class="container">
+            <div class="footer_div" style="display: flex; justify-content: space-between">
+                <div class="footerBox">
+                    <p class="footerP">
+                        ©Все права защищены
+                    </p>
+                </div>
+                <div class="footerBox">
+                    <p class="contactUs" style="margin: 5px">
+                        Contact us: 
+                    </p>
+                <div class="contacts">
+                    <a class="footerlink" href="tel:+78005553535">
+                            8-800-555-35-35
+                        </a>
+                    <a class="footerlink" style="color: white" href="mailto:catstail@narod.ru">
+                        catstail@narod.ru
+                    </a>
+                </div>
+                </div>
+                <div class="footerBox">
+                    <a class="footerlink" href="#top">
+                        Вернуться к началу страницы
+                    </a>
+                </div>
+                <div class="footerBox">
+                    <a class="footerlink" href="../index.html#about_info">
+                        Информация о нас
+                    </a>
+                </div>
+                <div class="footerBox">
+                    <p class="footerP" style="margin: 0;">
+                        By Vitka and Artemka
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
